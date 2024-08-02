@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daroya</title>
+    <style>
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://lh5.googleusercontent.com/proxy/rH24Q0sNDRs1IreAGtiFabn5nWRYcO6ll6X_VcKHAjk5FWE07rRukdpmpM3Hp4hCsxnA4skdhKDaVzRbnrLWUBoS306CttXdRIbacqbtVKaZgGAAQHRzEhbgNVPJ3QHjq-4PH7E') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 20px; /* Более закругленные углы */
+            color: #fff;
+            width: 350px; /* Шире контейнер */
+            border: 4px solid red; /* Более широкая красная обводка */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            background-size: cover;
+            background-position: center;
+        }
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 20px;
+            overflow: hidden; /* Ensures text stays within the container */
+            white-space: nowrap; /* Prevents text from wrapping */
+            border-right: 4px solid; /* The typing cursor */
+            width: 15ch; /* Adjust to fit the longest text */
+            animation: typing 3s steps(15) infinite, blink 0.5s step-end infinite alternate;
+        }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid red; /* Красная обводка */
+            background: transparent; /* Прозрачный фон */
+            transition: background 0.3s, color 0.3s;
+        }
+        .buttons a:hover {
+            background: red;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="avatar" id="avatar"></div>
+        <div class="title">Daroya</div>
+        <div class="subtitle" id="animated-text">Beginer html devoloper</div>
+        <div class="buttons">
+            <a href="https://t.me/memsfonstt">TG</a>
+            <a href="https://www.tiktok.com/@gavrilukyaroslav">TikTok</a>
+            <a href="https://www.youtube.com/channel/UCuq553j522FDSkSqkVME_vg">YouTube</a>
+            <a href="https://github.com/Daroya">GitHub</a>
+            <a href="YOUR_SSS_URL">$$$</a>
+            <a href="https://discordapp.com/users/1120284814583545926/">Discord</a>
+        </div>
+    </div>
+
+    <script>
+        const texts = [
+            "Beginer html devoloper",
+            "Python devoloper",
+            "Programer kids",
+            "coder",
+            "ne scam",
+            'lol XD',
+            'hmmm....',
+            'real'
+        ];
+
+        let count = 0;
+        const element = document.getElementById("animated-text");
+
+        function updateText() {
+            element.textContent = texts[count];
+            count = (count + 1) % texts.length;
+        }
+
+        setInterval(updateText, 3000); // Change text every 3 seconds
+
+        // Set avatar image
+        const avatarImageUrl = 'https://99px.ru/sstorage/1/2022/09/image_10309220823265967451.gif'; // Вставьте сюда URL вашего изображения
+        document.getElementById('avatar').style.backgroundImage = `url(${avatarImageUrl})`;
+    </script>
+</body>
+</html>
