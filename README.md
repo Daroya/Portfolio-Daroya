@@ -48,7 +48,7 @@ HTML5
 
 CSS3
 
-##📌 Notes
+## 📌 Notes
 
 ✨ This is my first personal portfolio project.
 It was made to practice HTML, CSS.
